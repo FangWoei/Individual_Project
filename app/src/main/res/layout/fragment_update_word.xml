@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.foo.individualproject.ui.update.UpdateWordViewModel" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        tools:context=".ui.update.UpdateWordFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingStart="2dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/title"
+            android:text="@={viewModel.title}"
+            android:background="@drawable/input_bg"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/meaning"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/etMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="2dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/input_bg"
+            android:hint="@string/meaning"
+            android:text="@={viewModel.meaning}"
+            android:gravity="start"
+            android:minLines="3"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/synonyms"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/etSynonyms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="2dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/input_bg"
+            android:hint="@string/synonyms"
+            android:text="@={viewModel.synonyms}"
+            android:gravity="start"
+            android:minLines="3"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/details"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/etDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingStart="2dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/input_bg"
+            android:hint="@string/details"
+            android:text="@={viewModel.details}"
+            android:gravity="start"
+            android:minLines="3"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:onClick="@{() -> viewModel.edit()}"
+            android:text="Update"/>
+
+    </LinearLayout>
+</layout>

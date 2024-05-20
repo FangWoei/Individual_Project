@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.foo.individualproject.ui.home.HomeFragment"
+        android:label="HomeFragment"
+       >
+        <action
+            android:id="@+id/homeToAddWord"
+            app:destination="@id/addWordFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_selectedWordFragment"
+            app:destination="@id/selectedWordFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="com.foo.individualproject.ui.add.AddWordFragment"
+        android:label="AddWordFragment"
+        />
+
+    <fragment
+        android:id="@+id/updateWordFragment"
+        android:name="com.foo.individualproject.ui.update.UpdateWordFragment"
+        android:label="UpdateWordFragment"
+        >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/UpdateToHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectedWordFragment"
+        android:name="com.foo.individualproject.ui.selected.SelectedWordFragment"
+        android:label="selectedWordFragment"
+    >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_selectedWordFragment_to_updateWordFragment"
+            app:destination="@id/updateWordFragment" />
+        <action
+            android:id="@+id/action_selectedWordFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

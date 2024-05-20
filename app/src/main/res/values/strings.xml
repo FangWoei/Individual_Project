@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Individual Project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title</string>
+    <string name="desc">Description\n</string>
+    <string name="meaning">Meaning</string>
+    <string name="synonyms">Synonyms</string>
+    <string name="details">Details</string>
+</resources>
